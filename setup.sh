@@ -1,0 +1,45 @@
+#!/bin/bash
+# yay
+sudo pacman -Syu
+
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+makepkg -si
+
+cd ..
+rm -rf yay
+
+# hyprland first boot
+yay -S hyprland kitty
+
+# change shell
+yay -S zsh
+chsh -s /usr/bin/zsh $USER
+
+set -euo pipefail
+
+PLUGIN_DIR="$(dirname "$(realpath "$0")")"
+
+declare -A PLUGINS=(
+  [zsh-autosuggestions]="https://github.com/zsh-users/zsh-autosuggestions.git"
+  [zsh-syntax-highlighting]="https://github.com/zsh-users/zsh-syntax-highlighting.git"
+)
+
+echo "Installing in  $PLUGIN_DIR"
+
+for NAME in "${!PLUGINS[@]}"; do
+  REPO_URL="${PLUGINS[$NAME]}"
+  TARGET_DIR="$PLUGIN_DIR/$NAME"
+
+  if [ -d "$TARGET_DIR/.git" ]; then
+    echo "Updating $NAME..."
+    git -C "$TARGET_DIR" pull --quiet
+  else
+    echo "Cloning $NAME..."
+    git clone --quiet "$REPO_URL" "$TARGET_DIR"
+  fi
+done
+
+echo "Finished installation"
