@@ -30,9 +30,30 @@ chsh -s /usr/bin/zsh $USER
 yay -S oh-my-posh fastfetch
 ```
 
-Use stow,
+Use stow
 ```
 sudo pacman -S stow
 git clone https://github.com/streakwind/dotfiles.git
 stow -d ~/dotfiles -t ~/ configs
+```
+
+Hyprland + rest of system stuff
+```
+yay -S hyprland kitty
+yay -S hypridle hyprlock hyprpaper hyprpicker hyprpolkitagent hyprshot
+
+curl -sS https://keys.openpgp.org/vks/v1/by-fingerprint/F4FDB18A9937358364B276E9E25D679AF73C6D2F | gpg --import -
+yay -S waybar wlogout swww swaync
+
+yay -S network-manager-applet bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol nautilus gvfs xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swayosd brightnessctl rofi
+
+hyprland
+```
+
+Git authentication
+```
+sudo pacman -S github-cli
+gh auth login
+git config --global user.name "<name>"
+git config --global user.email "<email>"
 ```
