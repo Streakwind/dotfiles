@@ -32,6 +32,9 @@ fi
 
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
+bindkey "^[[3~" delete-char
+bindkey "^[[5~" history-search-backward
+bindkey "^[[6~" history-search-forward
 
 # plugins
 source ~/.config/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
