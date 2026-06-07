@@ -1,23 +1,4 @@
 #!/bin/bash
-# yay
-sudo pacman -Syu
-
-sudo pacman -S --needed base-devel git
-git clone https://aur.archlinux.org/yay.git
-
-cd yay
-makepkg -si
-
-cd ..
-rm -rf yay
-
-# hyprland first boot
-yay -S hyprland kitty
-
-# change shell
-yay -S zsh
-chsh -s /usr/bin/zsh $USER
-
 set -euo pipefail
 
 PLUGIN_DIR="$(dirname "$(realpath "$0")")"

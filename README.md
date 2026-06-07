@@ -11,6 +11,25 @@ sudo nano /etc/pacman.conf # then uncomment "[multilib]" and "Include = /etc/pac
 sudo pacman -Syu
 ```
 
+Get yay
+```
+sudo pacman -S --needed base-devel git
+git clone https://aur.archlinux.org/yay.git
+
+cd yay
+makepkg -si
+
+cd ..
+rm -rf yay
+```
+
+Get zsh
+```
+yay -S zsh
+chsh -s /usr/bin/zsh $USER
+yay -S oh-my-posh fastfetch
+```
+
 Use stow,
 ```
 sudo pacman -S stow
