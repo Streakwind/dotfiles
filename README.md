@@ -65,3 +65,8 @@ SDDM
 yay -S sddm
 sudo systemctl enable sddm
 ```
+
+Quickshell
+```
+yay -S quickshell
+```
