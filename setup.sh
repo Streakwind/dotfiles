@@ -1,7 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-PLUGIN_DIR="$(dirname "$(realpath "$0")")"
+PLUGIN_DIR="$HOME/.config/.zsh/plugins"
+mkdir -p "$PLUGIN_DIR"
 
 declare -A PLUGINS=(
   [zsh-autosuggestions]="https://github.com/zsh-users/zsh-autosuggestions.git"
