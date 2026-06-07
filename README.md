@@ -47,6 +47,8 @@ yay -S waybar wlogout swww swaync
 
 yay -S network-manager-applet bluez bluez-utils blueman pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol nautilus gvfs xdg-desktop-portal-hyprland qt5-wayland qt6-wayland swayosd brightnessctl rofi
 
+yay -S ttf-jetbrains-mono-nerd
+
 hyprland
 ```
 
