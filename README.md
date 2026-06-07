@@ -63,4 +63,5 @@ git config --global user.email "<email>"
 SDDM
 ```
 yay -S sddm
+sudo systemctl enable sddm
 ```
