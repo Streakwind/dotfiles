@@ -66,6 +66,12 @@ yay -S sddm
 sudo systemctl enable sddm
 ```
 
+Fonts
+```
+yay -S ttf-liberation ttf-dejavu ttf-bitstream-vera ttf-droid noto-fonts noto-fonts-emoji noto-fonts-cjk ttf-nerd-fonts-symbols-common ttf-jetbrains-mono
+fc-cache -fv
+```
+
 Quickshell
 ```
 yay -S quickshell
