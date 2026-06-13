@@ -76,3 +76,11 @@ Quickshell
 ```
 yay -S quickshell
 ```
+
+Neovim notetaking!!!
+Install neovim and tree-sitter
+```
+yay -S neovim tree-sitter
+:Lazy sync
+:TSInstall cpp c python java asm bash markdown markdown_inline lua json
+``
