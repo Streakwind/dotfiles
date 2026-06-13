@@ -80,7 +80,7 @@ yay -S quickshell
 Neovim notetaking!!!
 Install neovim and tree-sitter
 ```
-yay -S neovim tree-sitter
+yay -S neovim tree-sitter tree-sitter-cli
 :Lazy sync
 :TSInstall cpp c python java asm bash markdown markdown_inline lua json
 ``
