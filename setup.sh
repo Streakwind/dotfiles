@@ -13,7 +13,7 @@ curl -sS https://keys.openpgp.org/vks/v1/by-fingerprint/F4FDB18A9937358364B276E9
 sudo pacman -S --needed \
   base-devel git zsh hyprland kitty \
   hypridle hyprlock hyprpaper hyprpicker hyprpolkitagent \
-  waybar wlogout swww swaync \
+  waybar swww swaync \
   network-manager-applet bluez bluez-utils blueman \
   pipewire pipewire-pulse pipewire-alsa pipewire-jack wireplumber pavucontrol \
   nautilus gvfs xdg-desktop-portal-hyprland qt5-wayland qt6-wayland \
@@ -21,7 +21,7 @@ sudo pacman -S --needed \
   ttf-liberation ttf-dejavu noto-fonts noto-fonts-emoji noto-fonts-cjk \
   ttf-jetbrains-mono ttf-jetbrains-mono-nerd
 
-yay -S --needed oh-my-posh swayosd quickshell hyprshot ttf-nerd-fonts-symbols-common
+yay -S --needed wlogout oh-my-posh swayosd quickshell hyprshot ttf-nerd-fonts-symbols-common
 
 fc-cache -fv
 
